@@ -3,11 +3,10 @@ services:
     name: rsshub
     env: node
     plan: free
-    branch: main
     buildCommand: pnpm install && pnpm build
     startCommand: pnpm start
+    rootDir: .
     envVars:
       - key: NODE_ENV
         value: production
-      - key: CACHE_TYPE
-        value: memory
+
